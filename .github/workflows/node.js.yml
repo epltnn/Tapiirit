@@ -22,6 +22,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+    - name: Install mocha
+      run: npm install -g mocha
 
     # Install dependencies including Mocha and Chai
     - run: npm ci
