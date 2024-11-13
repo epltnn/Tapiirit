@@ -34,3 +34,7 @@ jobs:
     # Run tests (Mocha with Chai)
     - name: Run tests
       run: mocha tests/add.test.js
+    
+    - name: Coveralls GitHub Action
+      uses: coverallsapp/github-action@v2.3.4
+            
