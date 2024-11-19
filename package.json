@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "mocha --recursive"
+    "test": "nyc mocha --recursive"
   },
   "author": "",
   "license": "MIT",
@@ -13,5 +13,10 @@
     "chai": "^5.1.2",
     "mocha": "^10.8.2",
     "nyc": "^17.1.0"
+  },
+  "nyc": {
+    "reporter": ["text", "lcov"],
+    "include": ["src/*.js"],
+    "exclude": ["test/*.js"]
   }
 }
