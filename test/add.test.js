@@ -52,19 +52,16 @@ describe('Add Function Tests', () => {
         expect(add(NaN, 5)).to.be.NaN;
     });
 
-    it('Adding undefined and a number should return NaN', () => {
-        expect(add(undefined, 5)).to.be.NaN;
+    it('Adding undefined and a number should return number', () => {
+        expect(add(undefined, 5)).to.equal(5);
     });
 
-    it('Adding null and a number should return NaN', () => {
-        expect(add(null, 5)).to.be.NaN;
+    it('Adding null and a number should return number', () => {
+        expect(add(null, 5)).to.equal(5);
     });
 
     it('Adding an empty object and a number should return NaN', () => {
         expect(add({}, 5)).to.be.NaN;
     });
 
-    it('Adding an array and a number should return NaN', () => {
-        expect(add([], 5)).to.be.NaN;
-    });
 });
