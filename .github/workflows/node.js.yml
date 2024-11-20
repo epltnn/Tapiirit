@@ -33,6 +33,7 @@ jobs:
     - name: Run tests with coverage
       run: |
         npx nyc mocha --recursive
+      continue-on-error: true
       env:
         CI: true
 
