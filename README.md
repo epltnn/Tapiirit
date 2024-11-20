@@ -1,4 +1,4 @@
-# Student template
+# Group Tapiirit
 
 ## Purpose of this repository
 
