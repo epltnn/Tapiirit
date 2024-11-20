@@ -18,7 +18,7 @@ Individuals who remove or modify the license file will also carry the consequenc
 
 TODO: Functions to be tested
 - Add
-- AddMapEntry
+- AddMapEntry (Replace this)
 - Chunk
 - DefaultTo
 - Every
