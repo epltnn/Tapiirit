@@ -1,23 +1,32 @@
 {
   "name": "software-testing-assignment",
   "version": "1.0.0",
-  "description": "## Purpose of this repository",
+  "description": "Testing 10 functions",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "nyc mocha --recursive"
+    "test": "mocha",
+    "coverage": "c8 --reporter=lcov --reporter=text mocha && c8 report --reporter=text-lcov | coveralls"
   },
-  "author": "",
+  "author": "Tapiirit",
   "license": "MIT",
   "devDependencies": {
+    "c8": "^7.14.0",
     "chai": "^5.1.2",
-    "mocha": "^10.8.2",
-    "nyc": "^17.1.0"
+    "coveralls": "^3.1.1",
+    "mocha": "^10.8.2"
   },
-  "nyc": {
-    "reporter": ["text", "lcov"],
-    "include": ["src/*.js"],
-    "exclude": ["test/*.js"],
+  "c8": {
+    "reporter": [
+      "text",
+      "lcov"
+    ],
+    "include": [
+      "src/*.js"
+    ],
+    "exclude": [
+      "test/*.js"
+    ],
     "all": true
   }
 }
