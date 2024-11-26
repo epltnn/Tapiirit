@@ -56,7 +56,7 @@ describe('Chunk Function Tests', () => {
         expect(result).to.deep.equal([]);
     });
 
-    it('should handle size as undefined and default to 1', () => {
+    it('should handle undefined size and default it to 1', () => {
         const result = chunk(['a', 'b', 'c']);
         expect(result).to.deep.equal([['a'], ['b'], ['c']]);
     });
