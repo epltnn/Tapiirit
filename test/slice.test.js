@@ -6,6 +6,9 @@ const expect = chai.expect;
 
 const testArray = ['a', 'b', 'c', 'd'];
 
+
+/* The slice function is made to be an alternative to the Array slice method, so
+   the Array slicce method is used in these test to ensure they return the same result. */
 describe('Slice Functions Tests', () => {
 
     // Basic cases:
