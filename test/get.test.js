@@ -146,4 +146,11 @@ describe('Get Functions Tests', () => {
         expect (result).to.deep.equal(lodashResult);
         expect (result).to.deep.equal(undefined);
     })
+
+    //
+    it('Should return undefined if path parameter is null', () => {
+        const result = get(object, null);
+        expect(result).to.deep.equal(undefined);
+        expect(result).to.deep.equal(_.get(object, null));
+    })
 })
