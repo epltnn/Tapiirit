@@ -19,7 +19,7 @@ const abmiguousObject1 = { 'a': { '1': 3 } };
 const undefinedObject = { 'a': undefined };
 
 /* In these tests, result is compared both to a hard coded object and the result from 
-   lodash reduce function to ensure the result matches both. */
+   lodash get function to ensure the result matches both. */
 describe('Get Functions Tests', () => {
     // Basic cases:
     it('Should return the right element (string syntax)', () => {
