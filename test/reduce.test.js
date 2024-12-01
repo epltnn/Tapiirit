@@ -2,10 +2,9 @@ import reduce from '../src/reduce.js';
 import * as chai from 'chai';
 import 'mocha';
 
-
+// Import lodash
 import { createRequire } from "module";
 const require = createRequire(import.meta.url);
-// Load the core build.
 var _ = require('lodash');
 
 const expect = chai.expect;
@@ -23,7 +22,9 @@ const testObject = {
 
 
 /* In some test cases, result is compared both to a hard coded object and the result from 
-   lodash reduce function to ensure the result matches both*/
+   lodash reduce function to ensure the result matches both. 
+   Some of the test results don't seem "intuitive", but since lodash's reduce function 
+   returns the same result, the behavior can't really be considered incorrect. */
 describe('Reduce Functions Tests', () => {
 
     it('Function should return the same value as the documentation example', () => {
