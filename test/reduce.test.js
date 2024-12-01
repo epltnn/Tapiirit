@@ -115,9 +115,9 @@ describe('Reduce Functions Tests', () => {
     })
 
     it("Should attempt to perform the function anyway even if the provided collection is not a collection V2", () => {
-        let collection = {'c': 'C', 'd': 'D'};
-        let iteratee = _.defaults;;
-        let accumulator = {};
+        const collection = {'c': 'C', 'd': 'D'};
+        const iteratee = _.defaults;;
+        const accumulator = {};
         const result = reduce(collection, iteratee, accumulator);
 
         expect(result).to.deep.equal(_.reduce(collection, iteratee, accumulator));
@@ -132,12 +132,48 @@ describe('Reduce Functions Tests', () => {
     })
 
     it("Should return accumulator unchanged if collection is null", () => {
-        let iteratee = _.defaults;
-        let accumulator = [1, 2, 3, 4, 5];
+        const iteratee = _.defaults;
+        const accumulator = [1, 2, 3, 4, 5];
         const result = reduce(null, iteratee, accumulator);
 
         expect(result).to.deep.equal(_.reduce(null, iteratee, accumulator));
         expect(result).to.deep.equal(accumulator);
     })
+
+    it("Should return accumulator unchanged if collection is undefined", () => {
+        const iteratee = _.defaults;
+        const accumulator = [1, 2, 3, 4, 5];
+        const result = reduce(undefined, iteratee, accumulator);
+
+        expect(result).to.deep.equal(_.reduce(undefined, iteratee, accumulator));
+        expect(result).to.deep.equal(accumulator);
+    })
+
+    it("Should be able to handle an array with a single element", () => {
+        const collection = ['a'];
+        const iteratee = (res, value) => {return res + value;};
+
+        const result = reduce(collection, iteratee);        
+        expect(result).to.deep.equal(_.reduce(collection, iteratee));   
+        expect(result).to.deep.equal('a');
+    })
+
+    /* it("This is here just to improve test coverage for baseEach tbh", () => {
+        const collection = "12345";
+        const iteratee = (res, value) => {return res + Number(value);};
+        const accumulator = 0;
+
+        const result = reduce(collection, iteratee, accumulator);        
+        expect(result).to.deep.equal(_.reduce(collection, iteratee, accumulator));   
+        expect(result).to.deep.equal(15);
+    }) */
+
+    /* it("This is also kind of an experiment, not really testing anything in particular", () => {
+        const collection = [1, 2, _.defaults, 4];
+        const iteratee = (res, value) => {return res + value;};
+
+        const result = reduce(collection, iteratee);        
+        expect(result).to.deep.equal(_.reduce(collection, iteratee));
+    }) */
 
 })
