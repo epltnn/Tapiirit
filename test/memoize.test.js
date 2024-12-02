@@ -19,7 +19,7 @@ function add(a, b, c) {
    lodash memoize function to ensure the result matches both. */
 describe('Memoize Functions Tests 1', () => {
     // Basic cases:
-    it("Should run function only once unless value is changed", () => {
+    it("Should run function only once unless cache value is explicitly is changed", () => {
         const object = { 'a': 1, 'b': 2 };
         const other = { 'c': 3, 'd': 4 };
         const values = memoize(_.values);
