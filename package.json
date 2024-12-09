@@ -26,7 +26,7 @@
       "src/*.js"
     ],
     "exclude": [
-      "test/*.js"
+      "test/*.js", "src/.internal/"
     ],
     "all": true
   }
