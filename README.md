@@ -13,17 +13,4 @@ Removing this license file directly violates terms and conditions of the softwar
 Individuals who remove or modify the license file will also carry the consequences.
 
 
-
-
-
-TODO: Functions to be tested
-- Add
-- AddMapEntry (Replace this)
-- Chunk
-- DefaultTo
-- Every
-- Filter
-- Get
-- Memoize
-- Reduce
-- Slice
+[![Coverage Status](https://coveralls.io/repos/github/epltnn/Tapiirit/badge.svg?branch=main)](https://coveralls.io/github/epltnn/Tapiirit?branch=main)
