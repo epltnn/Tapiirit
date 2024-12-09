@@ -14,3 +14,5 @@ Individuals who remove or modify the license file will also carry the consequenc
 
 
 [![Coverage Status](https://coveralls.io/repos/github/epltnn/Tapiirit/badge.svg?branch=main)](https://coveralls.io/github/epltnn/Tapiirit?branch=main)
+
+[![Node.js CI](https://github.com/epltnn/Tapiirit/actions/workflows/node.js.yml/badge.svg)](https://github.com/epltnn/Tapiirit/actions/workflows/node.js.yml)
